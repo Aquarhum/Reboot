@@ -4,6 +4,14 @@ body{
     background:lightgray;
 }
 
+.container{
+    height:568px;
+    width:320px;
+    background:lightgray;
+    margin:0 auto;
+    border:1px solid black;
+}
+
 h1{
     text-align:center;
 }
@@ -22,15 +30,11 @@ img{
 
 /* Section 1 - Avatar + Bouton */ 
 
-.container{
-   width:80%;
-   position:relative;
-   left:50%;
-   margin-left:-40%;
-   height:70%;
-   overflow:hidden;
-}
 
+.explication__resultat{
+position:relative;
+top:10px;
+}
 .img > h1{
     position:relative;
     top:-20px;
@@ -51,7 +55,7 @@ img{
 
 .btnactif{
     border-bottom:2px solid rgba(355,210,123,.9);
-    top:10px;   
+    
 }
 
 .bouton--element{
@@ -77,13 +81,13 @@ img{
 /* Section 2 - Trouver perso - pop-up */ 
 
 .resultat{
-    width:80%;
+    width:320px;
+    height:568px;
     position:absolute;
-    top:-1000px;
-    left:50%;
-    margin-left:-40%;
+    transform: translateY(-250%);
+    margin: 0 auto;
     background: rgba(24, 46, 51, 0.6);
-    height:80%; 
+   
 }
 
 .winorfail{
@@ -124,6 +128,8 @@ a{display:block;}
     margin:10px;
     position:relative;
     left:-30px;
+    top:60px;
+    
     padding:15px;
 }
 
@@ -133,7 +139,7 @@ a{display:block;}
     border-radius:15px;
     background:pink;
     position:absolute;
-    top:200px;
+    top:350px;
     left:20px;
     font-size: 20px;
 }
@@ -141,20 +147,20 @@ a{display:block;}
 /* JS */
 
 .goback{
-        -webkit-transform:translateY(1050px);
-        -webkit-transition: transform 2s linear;
-        transition: transform 2s linear;}
+        -webkit-transform:translateY(-95%);
+        -webkit-transition: transform 1s linear;
+        transition: transform 1s linear;}
 
 
 
 .goback--close{
-        -webkit-transform:translateY(-1050px);
-        -webkit-transition: transform 2s linear;}
+        -webkit-transform:translateY(-250%);
+        -webkit-transition: transform 1s linear;}
 
 .imgwin{
     display:block;
     position:absolute;
-    left:0%;
+    
 }
 
 .imgfail{

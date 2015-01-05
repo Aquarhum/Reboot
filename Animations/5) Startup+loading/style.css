@@ -1,9 +1,28 @@
 body {
     background-color: #3b3b3b;
+    overflow:hidden;
+}
+
+.container{
+    
+    width:100%;
+}
+
+.anim{
+    height:568px;
+    width:320px;
+    background:lightgray;
+    float:left;
+   
+    
+}
+
+.anim:nth-child(2){
+    margin-left:10px;
 }
 
 .chargement{
-    position:fixed;
+    position:relative;
     top:50%;
     left:50%;
 }
@@ -31,9 +50,9 @@ body {
 
 .loading
 {
-    position:absolute;
-    top:80%;
-    left:45%; 
+    position:relative;
+    top:50%;
+    left:50%; 
  
 }
 

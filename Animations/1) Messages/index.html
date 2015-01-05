@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+	<meta name="apple-mobile-web-app-title" content="Look">
+	<meta charset="UTF-8" />
+	<script src="//use.typekit.net/evp0ehk.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0">
+
+	<!-- ICON -->
+	<!-- iPhone non-retina 57x57 -->
+	<link rel="apple-touch-icon" href="assets/img/icon57.png"/>
+	<!-- iPhone retina 114x114 -->
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/icon114.png"/>
+
+	<!-- Startup image -->
+	<!-- iPhone standard resolution 320x460  (landscape not needed because all web apps start portrait on iPhone) -->
+	<link  rel="apple-touch-startup-image" href="assets/img/splash-320x460.jpg" media="(device-width: 320px)" />
+	<!-- iPhone 4/4s high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+	<link rel="apple-touch-startup-image" href="assets/img/splash-640x920.jpg" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" />
+	<!-- iPhone 5 high resolution (retina) 640x1096 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+	<link rel="apple-touch-startup-image" href="assets/img/splash-640x1096.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+	<!-- JS -->
+	<script defer src="assets/js/fastclick.js"></script>
+	<!-- https://github.com/ftlabs/fastclick -->
+
+	<script defer src="assets/js/app.js"></script>
+	<script defer src="assets/js/profil-edit.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1 class="explication--titre">Animation nouveau message</h1>
+	<p class="explication--p"> Appuyez sur les touches Haut/Bas de votre clavier pour faire varier le nombre de messages reçus</p>
+	<div class="container">
+	<nav>
+		<ul>
+			<li class="hamburger">
+				<a href="http://www.google.be"> 
+					<div class="hamburger__element"></div>
+					<div class="hamburger__element"></div>
+				</a>
+			</li>
+
+			<li><h1> LOOK </h1></li>
+
+			<li class="message">
+			
+				<div class="message--enveloppe">
+					<div class="triangle"></div>
+					<div class="rectangle"></div>
+				</div>
+
+				<div class="message--notification">
+					<div id="bulle"></div>
+				</div>
+
+			</li>
+			<li class="contact">
+				<div></div>
+			</li>
+	</nav>
+
+	<main>
+		<section class="collone collone__online">
+			<h1> Online </h1>
+			<ul>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+			
+			</ul>
+		</section>
+		<section class="collone collone__new">
+			<h1> New </h1>
+			<ul>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+				<li>
+					<img src="test.png" alt="avatar">
+					<h2 class="collone__texte"> Jerem </h2>
+				</li>
+				
+			</ul>
+		</section>	
+		<section class="jouer">
+		<h1> JOUER </h1>
+	</section>
+	</main>
+	</div>
+
+
+	<script>
+	var compteur = 0;
+	var valeurs = document.getElementById("bulle");
+	var tablevaleurs = [0,1,2,3,4,5,6,7,8,9];
+
+	function test(event)
+	{
+		if(event.keyCode == 38)
+		{
+			if (compteur < 9)
+			{
+			compteur = compteur+1;
+			}
+			
+		}
+		if(event.keyCode == 40)
+		{
+			if (compteur > 0)
+			{
+			compteur = compteur-1;
+			}
+		}
+		valeurs.innerHTML = tablevaleurs[compteur];
+		messageenveloppe=document.getElementsByClassName("message--enveloppe");
+
+		if (compteur < 1)
+		{
+			messageenveloppe[0].classList.add("compteur0");
+			messageenveloppe[0].classList.remove("compteur2");
+			valeurs.style.display = ("none");
+
+
+		}
+		if (compteur >=1)
+		{
+			messageenveloppe[0].classList.remove("compteur0");
+			messageenveloppe[0].classList.add("compteur2");
+			messageenveloppe[0].classList.remove("compteur4");
+			valeurs.style.display = ("block");
+		}
+		if (compteur >=4)
+		{
+			messageenveloppe[0].classList.remove("compteur2");
+			messageenveloppe[0].classList.add("compteur4");
+			messageenveloppe[0].classList.remove("compteur6");
+		}
+		if (compteur >=6)
+		{
+			messageenveloppe[0].classList.remove("compteur4");
+			messageenveloppe[0].classList.add("compteur6");
+			messageenveloppe[0].classList.remove("compteur8");
+		}
+		if (compteur >=8)
+		{
+			messageenveloppe[0].classList.remove("compteur6");
+			messageenveloppe[0].classList.add("compteur8");
+		}
+		
+	}
+
+	window.addEventListener("keyup", test);
+
+	</script>
+</body>
+</html>

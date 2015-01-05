@@ -30,8 +30,9 @@
 	
 </head>
 <body>
-	<section class="container">
-
+	<div class="container">
+	
+	<section>
 			<div class="img">
 				<img src="avatar.png" alt="avatar" class="img--element">
 				<h1> Michel, 28 </h1>
@@ -42,12 +43,12 @@
 				<div class="bouton--element"></div>
 			</a>
 
-			<p id="test"> Quand vous pensez avoir trouvé sur le joueur, cliquez que le bouton ci-dessus </p>
+			<p id="test"> Quand vous pensez avoir trouvé l'autre joueur, Appuyez sur le bouton ci-dessus </p>
 
 	</section>
 
 	<section class="resultat" id="resultat">
-		<h1> cliquez sur le symbole figurant sur l'ecran de votre contact</h1>
+		<h1 class="explication__resultat"> cliquez sur le symbole figurant sur l'ecran de votre contact</h1>
 		<div class="element">
 			<a class="symbole error" href="#"></a>
 			<a class="symbole yes" href="#"></a>
@@ -59,6 +60,7 @@
 			<img src="fail.png" alt="echec" class=" fail winorfail">
 		</div>
 	</section >
+</div>
 
 	<script type="text/javascript">
 		var play = document.getElementsByClassName("bouton");

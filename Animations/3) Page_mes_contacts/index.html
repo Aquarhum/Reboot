@@ -33,12 +33,13 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<p class="text-intro"> Vous pouvez supprimer des contacts en appuyant sur le carré rouge </p>
+	<div class="container">
 	<nav>
 		<h1> Contacts </h1>
 	</nav>
 
 	<main>
-		<p class="text-intro"> Vous pouvez supprimer des contacts en appuyant sur le carré rouge </p>
 		<ul>
 			<li class="personne">
 				<div class="img">
@@ -145,13 +146,18 @@
 			</li>
 			</ul>		
 	</main>
+</div>
 
 	<script>
 	var bouton = document.getElementsByClassName("profil");
+		varpersonne = document.getElementsByClassName("personne");
 
 	for(var i=0; i < bouton.length; i++ ){
 		bouton[i].addEventListener('click',(function(){
+		
 		this.parentNode.parentNode.style.display='none';
+
+
 
 	}));
 	}
