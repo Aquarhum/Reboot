@@ -1,0 +1,116 @@
+body, html{
+	-webkit-text-size-adjust: 100%;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+    overflow-y:visible;
+	font-family: sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+@media (orientation: portrait) {
+ /* do something */
+}
+@media (orientation: landscape) {
+ /* do something else */
+}
+
+ul {
+    list-style: none;
+    padding:0;
+
+}
+
+main{
+    
+    width:90%;
+    position:relative;
+    left:10px;
+    margin: 0 auto;
+    height:100%;
+}
+nav{
+    width:100%;
+    height:50px;
+    background:lightgray;
+}
+
+h1{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+img{
+    height:110px;
+}
+li{
+    float:left;
+    margin:6%;
+}
+
+.message{
+    height:48px;
+    width:48px;
+    background:green;
+    margin:0;
+    padding:0;
+    float:left;   
+}
+
+.btn{
+    width:105px;
+}
+.profil
+{
+    height:48px;
+    width:48px;
+    background:red;
+    float:right;
+    margin:0;
+    padding:0;
+    display: inline-block;
+
+}
+
+.img
+{height:115px;
+width:100px;
+
+;}
+
+.pseudo{
+    font-size: 15px;
+    color:red;
+    text-align: center;
+    position:relative;
+    top:-20px;
+}
+
+.online{
+    height:20px;
+    width:20px;
+    border-radius: 15px;
+    background:green;
+    position: relative;
+    top:-125px;
+    left:80px;
+}
+
+.coucou{
+    display:none;
+    
+}
+
+.text-intro
+{
+    text-align:center;
+    color:red;
+    font-size:20px;
+    font-family: sans-serif;
+    
+
+}
+
+

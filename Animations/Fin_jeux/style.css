@@ -1,0 +1,165 @@
+
+body{
+    overflow:hidden;
+    background:lightgray;
+}
+
+h1{
+    text-align:center;
+}
+
+p{
+   text-align:center;
+}
+
+img{
+    height:200px;
+    position:absolute;
+    right:50%;
+    margin-right: -20px;
+    top:60%;
+}
+
+/* Section 1 - Avatar + Bouton */ 
+
+.container{
+   width:80%;
+   position:relative;
+   left:50%;
+   margin-left:-40%;
+   height:70%;
+   overflow:hidden;
+}
+
+.img > h1{
+    position:relative;
+    top:-20px;
+}
+
+.bouton{
+    display:block;
+    height:100px;
+    width:200px;
+    border-radius: 50%;
+    border-bottom:10px solid rgba(355,210,123,.5);
+    background:red;
+    position:relative;
+    left:50%;
+    margin-top:20px;
+    margin-left:-100px;
+}
+
+.btnactif{
+    border-bottom:2px solid rgba(355,210,123,.9);
+    top:10px;   
+}
+
+.bouton--element{
+    position:relative;
+    left:60px;
+    top:20px;
+    height:50px;
+    width:50px;
+    background:blue;
+    float:left;
+    border-radius:25px;
+    opacity:0.5;
+    -webkit-transform : rotateX(45deg) ;    
+}
+
+.bouton--element:nth-child(2)
+{
+    background:pink;
+    left:45px;
+}
+
+
+/* Section 2 - Trouver perso - pop-up */ 
+
+.resultat{
+    width:80%;
+    position:absolute;
+    top:-1000px;
+    left:50%;
+    margin-left:-40%;
+    background: rgba(24, 46, 51, 0.6);
+    height:80%; 
+}
+
+.winorfail{
+    display:none;
+}
+
+.element{
+    position:relative;
+    left:50%;
+    margin-left:-120px;
+    text-align:center;}
+
+/*  Image */
+
+.img{  
+    width:100%;
+    position:relative;
+}
+
+.img--element{
+    height:300px;
+    background:gray;
+    width:300px;
+    position:relative;
+    left:50%;
+    margin-left:-150px;
+    top:10%;
+}
+
+a{display:block;}
+
+.symbole{
+    height:50px;
+    width:50px;
+    background:blue;
+    border-radius:25px;
+    float:left;
+    margin:10px;
+    position:relative;
+    left:-30px;
+    padding:15px;
+}
+
+.retour{
+    height:40px;
+    width:200px;
+    border-radius:15px;
+    background:pink;
+    position:absolute;
+    top:200px;
+    left:20px;
+    font-size: 20px;
+}
+
+/* JS */
+
+.goback{
+        -webkit-transform:translateY(1050px);
+        -webkit-transition: transform 2s linear;
+        transition: transform 2s linear;}
+
+
+
+.goback--close{
+        -webkit-transform:translateY(-1050px);
+        -webkit-transition: transform 2s linear;}
+
+.imgwin{
+    display:block;
+    position:absolute;
+    left:0%;
+}
+
+.imgfail{
+    display:block;
+     position:absolute;
+    left:0%;
+
+}

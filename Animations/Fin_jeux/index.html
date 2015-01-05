@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ma page</title>
+	
+	
+	<meta name="apple-mobile-web-app-title" content="Look">
+	<meta charset="UTF-8" />
+
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0">
+
+	<!-- ICON -->
+	<!-- iPhone non-retina 57x57 -->
+	<link rel="apple-touch-icon" href="assets/img/icon57.png"/>
+	<!-- iPhone retina 114x114 -->
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/icon114.png"/>
+
+	<!-- Startup image -->
+	<!-- iPhone standard resolution 320x460  (landscape not needed because all web apps start portrait on iPhone) -->
+	<link  rel="apple-touch-startup-image" href="assets/img/splash-320x460.jpg" media="(device-width: 320px)" />
+	<!-- iPhone 4/4s high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+	
+
+	<link rel="stylesheet" href="style.css">
+
+	
+</head>
+<body>
+	<section class="container">
+
+			<div class="img">
+				<img src="avatar.png" alt="avatar" class="img--element">
+				<h1> Michel, 28 </h1>
+			</div>
+
+			<a class="bouton" href="#"> 
+				<div class="bouton--element"></div>
+				<div class="bouton--element"></div>
+			</a>
+
+			<p id="test"> Quand vous pensez avoir trouvé sur le joueur, cliquez que le bouton ci-dessus </p>
+
+	</section>
+
+	<section class="resultat" id="resultat">
+		<h1> cliquez sur le symbole figurant sur l'ecran de votre contact</h1>
+		<div class="element">
+			<a class="symbole error" href="#"></a>
+			<a class="symbole yes" href="#"></a>
+			<a class="symbole error" href="#"></a>
+
+			<a class="retour"> Retour</a>
+
+			<img src="win.png" alt="reussi" class=" win winorfail">
+			<img src="fail.png" alt="echec" class=" fail winorfail">
+		</div>
+	</section >
+
+	<script type="text/javascript">
+		var play = document.getElementsByClassName("bouton");
+			back = document.getElementsByClassName("resultat");
+			retourx = document.getElementsByClassName("retour");
+			juste = document.getElementsByClassName("yes");
+			faux = document.getElementsByClassName("error");
+			boutonactif = document.getElementsByClassName("bouton");
+			imgwin = document.getElementsByClassName("win");
+			imgfail = document.getElementsByClassName("fail");
+
+
+
+		play[0].addEventListener("click",function(){
+			back[0].classList.remove("goback--close");
+			back[0].classList.add("goback");
+			boutonactif[0].classList.add("btnactif");
+		});
+
+		retourx[0].addEventListener("click",function(){
+			back[0].classList.add("goback--close");
+			boutonactif[0].classList.remove("btnactif");
+			imgwin[0].classList.remove("imgwin");
+			imgfail[0].classList.remove("imgfail");
+			fretour();
+		});
+		
+		juste[0].addEventListener("click",fjuste,false);
+		
+		faux[0].addEventListener("click",ffaux,false);
+		faux[1].addEventListener("click",ffaux,false);
+
+		
+		function ffaux(){
+			imgfail[0].classList.add("imgfail");
+			boutonactif[0].classList.remove("btnactif");
+			juste[0].removeEventListener("click",fjuste,false);
+			faux[1].removeEventListener("click",ffaux,false);
+		}
+		function fjuste(){
+			imgwin[0].classList.add("imgwin");
+			boutonactif[0].classList.remove("btnactif");
+			faux[0].removeEventListener("click",ffaux,false);
+			faux[1].removeEventListener("click",ffaux,false);
+		}
+		function fretour(){
+			juste[0].addEventListener("click",fjuste,false);
+			faux[0].addEventListener("click",ffaux,false);
+			faux[1].addEventListener("click",ffaux,false);
+		}
+	</script>
+
+</body>
+</html>
